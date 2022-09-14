@@ -73,7 +73,7 @@ class BasePage(object):
 
     def _find_element(self, locator):
         try:
-            WebDriverWait(self.driver, 100).until(
+            WebDriverWait(self.driver, 300).until(
                 lambda driver: self.driver.find_element(*locator))
             return self.driver.find_element(*locator)
         except NoSuchElementException:
